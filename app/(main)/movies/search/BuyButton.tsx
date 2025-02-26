@@ -3,7 +3,6 @@
 import { Button } from "@mantine/core";
 import { addMovieToBasket } from "../actions";
 import { useMutation, useQuery } from "@tanstack/react-query";
-import { sleep } from "@/utils/sleep";
 import { notifications } from "@mantine/notifications";
 
 export function BuyButton({

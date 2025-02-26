@@ -10,13 +10,11 @@ export default async function MoviesSearchLayout({
 }) {
   const authSession = await auth();
   return (
-    // <AppShell header={{ height: 60 }}>
     <>
       <header className="sticky top-0 z-10 bg-white">
         <FilteredSearch session={authSession}></FilteredSearch>
       </header>
       <main>{children}</main>
-      {/* <AppShellMain>{children}</AppShellMain> */}
     </>
   );
 }

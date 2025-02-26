@@ -2,7 +2,6 @@
 
 import {
   Badge,
-  Button,
   Card,
   CardSection,
   Group,
@@ -13,15 +12,10 @@ import {
   Tooltip,
 } from "@mantine/core";
 import NextImage from "next/image";
-import { SessionContext, SessionProvider, useSession } from "next-auth/react";
-import React, { useContext, useEffect, useState } from "react";
-import { addMovieToBasket } from "../actions";
+import React from "react";
 import { Movie, OpenSearchResultList } from "../interfaces";
-import { auth } from "@/auth";
-import { useRouter } from "next/router";
 import { Session } from "next-auth";
 import { BuyButton } from "./BuyButton";
-import { sleep } from "@/utils/sleep";
 import { trpc } from "@/trpc/server";
 
 function Demo({

@@ -47,7 +47,6 @@ export function NavbarSimple({ loggedIn }: { loggedIn: boolean }) {
     <Button
       component="a"
       className={classes.link}
-      // data-active={active.startsWith(item.link) || undefined}
       href={item.link}
       key={item.label}
       disabled={item.disabled}
@@ -56,12 +55,6 @@ export function NavbarSimple({ loggedIn }: { loggedIn: boolean }) {
       onClick={(event) => {
         item.disabled && event.preventDefault();
       }}
-      // onClick={(event) => {
-      //   // event.preventDefault();
-      //   // router.replace(item.link);
-      //   // location.reload();
-      //   // setActive(item.link);
-      // }}
     >
       <item.icon color="black" className={classes.linkIcon} stroke={1.5} />
       <span>{item.label}</span>

@@ -2,8 +2,6 @@
 
 import {
   CardElement,
-  ElementsConsumer,
-  useElements,
   useStripe,
 } from "@stripe/react-stripe-js";
 import axios from "axios";

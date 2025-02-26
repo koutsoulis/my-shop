@@ -1,4 +1,4 @@
-import { Basket, BasketContents } from "@/app/(main)/basket/interfaces";
+import { Basket } from "@/app/(main)/basket/interfaces";
 import { NextResponse, NextRequest } from "next/server";
 import Stripe from "stripe";
 

@@ -5,9 +5,7 @@ import { TRPCProvider } from "@/trpc/client";
 import { AppShell, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import { enableMapSet } from "immer";
-import { SessionProvider } from "next-auth/react";
 import { SignIn, SignOut } from "../../ui/layout-buttons";
-import Header from "./basket/header";
 import Main from "./basket/main";
 import NavBar from "./basket/navbar";
 import { Notifications } from "@mantine/notifications";
@@ -33,12 +31,10 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* <SessionProvider session={session}> */}
         <TRPCProvider>
           <MantineProvider>
             <Notifications position="top-right" />
             <AppShell
-              // header={{ height: 60 }}
               layout="alt"
               navbar={{
                 width: 300,
@@ -53,7 +49,6 @@ export default async function RootLayout({
             </AppShell>
           </MantineProvider>
         </TRPCProvider>
-        {/* </SessionProvider> */}
       </body>
     </html>
   );

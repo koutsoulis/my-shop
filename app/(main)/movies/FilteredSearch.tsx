@@ -54,7 +54,6 @@ export default function FilteredSearch({
       );
   }, [actualSearchParams]);
 
-  // const [data, setData] = useState<OpenSearchResultList | null>(null);
   const [selectedTimeRange, setSelectedTimeRange] = useState<{
     minYear: number;
     maxYear: number;
@@ -184,11 +183,6 @@ export default function FilteredSearch({
     />
   );
 
-  // function navigateToSearch(getMoviesIn: GetMoviesIn) {
-  //   const getMoviesInEncodedAsSearchParams = encodeGetMoviesIn(getMoviesIn);
-  //   router.replace(`/movies/search?${getMoviesInEncodedAsSearchParams}`);
-  // }
-
   const totalArticles = searchResultsQuery.data?.hits?.total?.value ?? 0;
 
   const articlesPerPage = 6;
@@ -196,7 +190,6 @@ export default function FilteredSearch({
   const totalPages = Math.ceil(totalArticles / articlesPerPage);
 
   return (
-    // <Container className="max-w-full max-h-full">
     <div className="px-5">
       <Group>
         <Tooltip label="Discover tailored movie suggestions based on your selected director, genres, and time period.">
@@ -272,7 +265,6 @@ export default function FilteredSearch({
         </Tooltip>
       </Group>
       <Pagination
-        // key={actualSearchParams?.searchTerm}
         value={actualSearchParams?.page}
         onChange={(page) =>
           setActualSearchParams({
@@ -282,7 +274,6 @@ export default function FilteredSearch({
         }
         total={totalPages}
       />
-      {/* </Container> */}
     </div>
   );
 }
