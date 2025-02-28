@@ -8,7 +8,7 @@ import superjson from 'superjson';
     return new QueryClient({
       defaultOptions: {
         queries: {
-          staleTime: 30 * 1000,
+          staleTime: Infinity,
         },
         dehydrate: {
           serializeData: superjson.serialize,
