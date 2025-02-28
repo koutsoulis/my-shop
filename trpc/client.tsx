@@ -41,7 +41,7 @@ export function TRPCProvider(
   //       render if it suspends and there is no boundary
   const queryClient = getQueryClient();
 
-  const ONE_DAY_IN_SECONDS = 60 * 60 * 24;
+  const ONE_YEAR_IN_SECONDS = 31536000; // max cache duration
 
   const [trpcClient] = useState(() =>
     trpc.createClient({
@@ -52,7 +52,7 @@ export function TRPCProvider(
           headers: new Headers([
             [
               "cache-control",
-              `s-maxage=${ONE_DAY_IN_SECONDS}, stale-while-revalidate=${ONE_DAY_IN_SECONDS}`,
+              `s-maxage=${ONE_YEAR_IN_SECONDS}, stale-while-revalidate=${ONE_YEAR_IN_SECONDS}`,
             ],
           ]),
         }),
